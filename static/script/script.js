@@ -1,2 +1,2 @@
 
-  alert("page has been loaded") 
+  alert("page has been loaded successfully"); 
