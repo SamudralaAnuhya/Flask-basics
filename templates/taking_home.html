@@ -1,0 +1,11 @@
+<html>
+    <h2>House Rent Information</h2>
+
+    <body>
+        {% if total_price >= 1000 %}   
+            <p>Monthly rent is {{ total_price }} USD. This is a high rent.</p>
+        {% else %}
+            <p>Monthly rent is {{ total_price }} USD. This is a low rent.</p>
+        {% endif %}
+    </body>
+</html>

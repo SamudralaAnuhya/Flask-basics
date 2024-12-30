@@ -1,0 +1,64 @@
+<!-- <html>
+    <body>
+        <h1>welcome to my website for finding home</h1>
+    </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Rent Information</title>
+    {# Adding a link to the CSS file #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='script/script.js') }}"></script>
+    <!-- {# Adding a javascript to display an alert message(popup) #}
+    <script> alert("page has been loaded")</script>     -->
+
+</head>
+<body>
+
+    <h1>House Rent Information</h1>
+    <p>Please fill out the form below to provide details about the rental property.</p>
+
+    <form action="/submit" method="POST">
+        <!-- House Rent -->
+        <div class="form-group">
+            <label for="rent">Monthly Rent (in USD):</label>
+            <input type="number" id="rent" name="rent" placeholder="Enter monthly rent" required>
+        </div>
+
+        <!-- Amenities Cost -->
+        <div class="form-group">
+            <label for="amenitiesCost">Cost for Amenities (in USD):</label>
+            <input type="number" id="amenitiesCost" name="amenitiesCost" placeholder="Enter amenities cost">
+        </div>
+
+        <!-- Pool Availability -->
+        <div class="form-group">
+            <label for="pool">Is there a pool?</label>
+            <select id="pool" name="pool">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+
+        <!-- Number of Bedrooms -->
+        <div class="form-group">
+            <label for="bedrooms">Number of Bedrooms:</label>
+            <input type="number" id="bedrooms" name="bedrooms" placeholder="Enter number of bedrooms" required>
+        </div>
+
+        <!-- Description -->
+        <div class="form-group">
+            <label for="description">Additional Details:</label>
+            <textarea id="description" name="description" rows="4" placeholder="Add any additional details about the property"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
